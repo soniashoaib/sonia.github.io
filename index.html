@@ -82,8 +82,6 @@
     .slideshow-wrap { position:relative; max-width:1300px; margin:0 auto; padding:0 6rem; }
     .slides-container { position:relative; overflow:hidden; }
 
-    /* Each slide is now a two-column layout where the left side
-       shows the FULL image (contain) on a parchment background */
     .slide {
       display:none;
       grid-template-columns: 1fr 1fr;
@@ -99,7 +97,6 @@
     @keyframes slideIn     { from{opacity:0;transform:translateX(40px)}  to{opacity:1;transform:translateX(0)} }
     @keyframes slideInLeft { from{opacity:0;transform:translateX(-40px)} to{opacity:1;transform:translateX(0)} }
 
-    /* Image side — uses contain so the whole artwork is always visible */
     .slide-image-wrap {
       position: relative;
       background: var(--parchment);
@@ -128,7 +125,6 @@
     }
     .slide.active .slide-image-wrap img { transform: scale(1.02); }
 
-    /* Ornate corners on image panel */
     .slide-image-wrap::before,.slide-image-wrap::after {
       content:''; position:absolute; width:60px; height:60px; z-index:2; pointer-events:none;
       background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 60' fill='none'%3E%3Cpath d='M2 2 Q25 2 2 25' stroke='%23c9a96e' stroke-width='1.2' fill='none'/%3E%3Cpath d='M2 2 Q42 2 2 42' stroke='%23c9a96e' stroke-width='.7' fill='none' opacity='.5'/%3E%3Ccircle cx='2' cy='2' r='2.5' fill='%23c9a96e'/%3E%3C/svg%3E");
@@ -137,7 +133,6 @@
     .slide-image-wrap::before { top:0; left:0; }
     .slide-image-wrap::after  { bottom:0; right:0; transform:rotate(180deg); }
 
-    /* Info side */
     .slide-info { display:flex; flex-direction:column; justify-content:center; padding:4rem 4rem 4rem 4.5rem; background:var(--parchment); position:relative; border-left:1px solid rgba(201,169,110,.2); }
     .slide-info::before { content:''; position:absolute; top:0; right:0; width:180px; height:100%; pointer-events:none; opacity:.8;
       background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 600' fill='none'%3E%3Cpath d='M160 0 Q120 100 150 200 Q180 300 140 400 Q110 500 150 600' stroke='%238a9e7e' stroke-width='1' fill='none' opacity='.2'/%3E%3Cellipse cx='148' cy='150' rx='12' ry='7' fill='%238a9e7e' opacity='.15' transform='rotate(-20 148 150)'/%3E%3Cellipse cx='155' cy='320' rx='10' ry='6' fill='%23c9a96e' opacity='.15' transform='rotate(15 155 320)'/%3E%3Cellipse cx='142' cy='480' rx='11' ry='6' fill='%238a9e7e' opacity='.15' transform='rotate(-10 142 480)'/%3E%3C/svg%3E");
@@ -276,82 +271,104 @@
 
       <div class="slides-container">
 
+        <!-- SLIDE 1 -->
         <div class="slide active">
           <div class="slide-image-wrap">
             <img src="https://i.ibb.co/fYRQjpGm/IMG-8280.avif" alt="Looking Out for You"/>
           </div>
           <div class="slide-info">
-            <div class="slide-counter">01 / 07</div>
+            <div class="slide-counter">01 / 08</div>
             <h3 class="slide-title">Looking Out for You</h3>
             <div class="slide-medium">Oil Paint on Wood</div>
             <p class="slide-desc">This piece explores the feelings of nostalgia associated with childhood and siblings, which is painted with warm and bright colours. This is juxtaposed with the feelings of emptiness that follow when siblings leave and you grow up, which is painted in cool colours.</p>
           </div>
         </div>
 
+        <!-- SLIDE 2 — NEW -->
+        <div class="slide">
+          <div class="slide-image-wrap">
+            <img src="https://i.ibb.co/6ckg4qtQ/daba023b-69cf-426d-a701-b93109c4e95b.jpg" alt="Imagine"/>
+          </div>
+          <div class="slide-info">
+            <div class="slide-counter">02 / 08</div>
+            <h3 class="slide-title">Imagine</h3>
+            <div class="slide-medium">Acrylic Paint on Pour Art on Canvas</div>
+            <p class="slide-desc">This piece aims to explore ideas of restriction as well as creativity. It shows that social conventions around women in South Asian societies can cause those with passion, creativity, and active imaginations to suppress themselves.</p>
+          </div>
+        </div>
+
+        <!-- SLIDE 3 -->
         <div class="slide">
           <div class="slide-image-wrap">
             <img src="https://i.ibb.co/zVS44tGS/18-sin-ti-tulo-20260318205726.jpg" alt="Rippling Reflection">
           </div>
           <div class="slide-info">
-            <div class="slide-counter">02 / 07</div>
+            <div class="slide-counter">03 / 08</div>
             <h3 class="slide-title">Rippling Reflection</h3>
             <div class="slide-medium">Oil Paint on Acrylic Pour Art on Canvas</div>
             <p class="slide-desc">This piece aims to explore themes of fluidity and identity, as the background is loose and flowy while the foreground is precise and controlled.</p>
           </div>
         </div>
+
+        <!-- SLIDE 4 -->
         <div class="slide">
           <div class="slide-image-wrap">
             <img src="https://i.ibb.co/32hwKF5/IMG-8684.avif" alt="Fair Game"/>
           </div>
           <div class="slide-info">
-            <div class="slide-counter">03 / 07</div>
+            <div class="slide-counter">04 / 08</div>
             <h3 class="slide-title">Fair Game</h3>
             <div class="slide-medium">Acrylic Paint on Wood</div>
             <p class="slide-desc">This piece aims to convey South Asian beauty standards around the idea of being pale and having light skin. The background is red to convey a sense of control, while the three women in the foreground apply white foundation and makeup to their faces.</p>
           </div>
         </div>
+
+        <!-- SLIDE 5 -->
         <div class="slide">
           <div class="slide-image-wrap">
             <img src="https://i.ibb.co/ymcHVshx/IMG-1542-2.jpg" alt="Control Yourself"/>
           </div>
           <div class="slide-info">
-            <div class="slide-counter">04 / 07</div>
+            <div class="slide-counter">05 / 08</div>
             <h3 class="slide-title">Control Yourself</h3>
             <div class="slide-medium">Acrylic Paint on Canvas with Yarn</div>
             <p class="slide-desc">This piece is a study of identity and autonomy, using various different techniques and colouring to portray a sense of conflict and themes of control.</p>
           </div>
         </div>
 
+        <!-- SLIDE 6 -->
         <div class="slide">
           <div class="slide-image-wrap">
             <img src="https://i.ibb.co/XfqkwPFD/IMG-7290.jpg" alt="Mera Ghar"/>
           </div>
           <div class="slide-info">
-            <div class="slide-counter">05 / 07</div>
+            <div class="slide-counter">06 / 08</div>
             <h3 class="slide-title">Mera Ghar</h3>
             <div class="slide-medium">Acrylic Paint &amp; Mixed Media on Wooden Skateboard</div>
-            <p class="slide-desc">This piece is representative of my cultural identity, being Pakistani and growing up in Singapore. It aims to show the feeling of cognitive dissonance between cultures and identity. The phrase “Mera Ghar” is painted and means “My Home”.</p>
+            <p class="slide-desc">This piece is representative of my cultural identity, being Pakistani and growing up in Singapore. It aims to show the feeling of cognitive dissonance between cultures and identity. The phrase "Mera Ghar" is painted and means "My Home".</p>
           </div>
         </div>
 
+        <!-- SLIDE 7 -->
         <div class="slide">
           <div class="slide-image-wrap">
             <img src="https://i.ibb.co/ymqCsxjm/d4e01eda-7fa8-42de-90c7-b0ab45082564.jpg" alt="Unveil"/>
           </div>
           <div class="slide-info">
-            <div class="slide-counter">06 / 07</div>
+            <div class="slide-counter">07 / 08</div>
             <h3 class="slide-title">Unveil</h3>
             <div class="slide-medium">Pen, Charcoal &amp; Watercolour on Paper</div>
             <p class="slide-desc">This piece aims to represent me as a person, with a hand removing a veil to represent me revealing my identity. The skull is representative of the theme of mortality, while the chess pieces on top of the book aim to show surface-level aspects of my identity while the rest is concealed.</p>
           </div>
         </div>
 
+        <!-- SLIDE 8 -->
         <div class="slide">
           <div class="slide-image-wrap">
             <img src="https://i.ibb.co/WWm6py11/IMG-0492.avif" alt="Study after Nicole Sleeth"/>
           </div>
           <div class="slide-info">
-            <div class="slide-counter">07 / 07</div>
+            <div class="slide-counter">08 / 08</div>
             <h3 class="slide-title">Study after Nicole Sleeth</h3>
             <div class="slide-medium">Oil Paint on Canvas</div>
             <p class="slide-desc">A study of Nicole Sleeth's portraiture, undertaken to refine oil painting and portraiture skills.</p>
@@ -366,6 +383,7 @@
 
       <div class="slide-dots" id="dots">
         <button class="dot active"></button>
+        <button class="dot"></button>
         <button class="dot"></button>
         <button class="dot"></button>
         <button class="dot"></button>
